@@ -1,0 +1,18 @@
+[package]
+name = "pinch"
+version = "0.1.0"
+edition = "2018"
+include = ["/src"]
+
+[lib]
+bench = false
+crate-type = ["lib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+handlebars = "4.1.2"
+pulldown-cmark = "0.8.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.66"
+toml = "0.4.2"
+walkdir = "2"

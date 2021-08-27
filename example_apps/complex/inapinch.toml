@@ -1,0 +1,6 @@
+name = 'complex'
+
+[plugin_options]
+
+[plugin_options.markdown]
+enable_tables = 'false'
