@@ -18,7 +18,7 @@ pub fn plugin() -> PluginDefinition {
             output.replace(".md", ".html")
         }),
         applies: Some(|file: &InputFile| -> bool { file.is_extension(".md") }),
-        process: Some(|file_contents, _context| -> String {
+        process: Some(|file_contents, _context, _config| -> String {
             let markdown_options = default_markdown_options(); // TODO: Pull from config (toml file) with `plugin_options` (probably add config as 3rd param)
             let parser = Parser::new_ext(file_contents.as_str(), markdown_options);
             let mut html_output = String::new();

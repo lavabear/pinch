@@ -3,6 +3,9 @@ name = "pinch"
 version = "0.1.0"
 edition = "2018"
 include = ["/src"]
+description = "An extensible static site generator."
+license = "MIT"
+keywords = ["static", "site", "generator"]
 
 [lib]
 bench = false

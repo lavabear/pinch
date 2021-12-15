@@ -247,7 +247,7 @@ impl Pinch {
                 if plugin.applies.is_some() && plugin.applies.unwrap()(file) {
                     let apply_plugin = plugin.process.expect("`process` is required");
                     let output_contents =
-                        apply_plugin(file.read_contents(), self.context.to_owned());
+                        apply_plugin(file.read_contents(), self.context.to_owned(), &self.config);
                     let output_filename = self.config.output_filename(file);
                     utils::create_directory(
                         output_filename

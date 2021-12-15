@@ -23,6 +23,6 @@ pub struct PluginDefinition {
     pub output_filename: Option<fn(file: &InputFile, output: String) -> String>,
     pub applies: Option<fn(file: &InputFile) -> bool>,
     pub pre_process: Option<fn(config: &Config, context: Context) -> PreprocessingOutput>,
-    pub process: Option<fn(file_contents: String, context: Context) -> String>,
+    pub process: Option<fn(file_contents: String, context: Context, config: &Config) -> String>,
     pub post_process: Option<fn(config: &Config, context: Context)>,
 }

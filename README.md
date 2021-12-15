@@ -10,6 +10,6 @@ fn main() {
 ## Running Unit Tests
 NOTE: Run from root directory
 
-``bash
+```bash
 cargo fmt && cargo clippy --workspace --all-targets -- && cargo test --
-``
+```
